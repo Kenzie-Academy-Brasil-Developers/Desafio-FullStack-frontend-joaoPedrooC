@@ -1,3 +1,5 @@
+import { RoutesMain } from "./routes/RoutesMain"
+
 export const App = () => {
-  return ()
+  return <RoutesMain />
 }
