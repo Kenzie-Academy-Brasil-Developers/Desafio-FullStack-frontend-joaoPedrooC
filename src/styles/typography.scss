@@ -1,21 +1,21 @@
-@mixin font__poppins($font-weight: 400) {
+@mixin font__poppins($font-weight: 600) {
   font-family: 'Poppins';
   font-weight: $font-weight;
   color: var(--color-white-1);
 }
 
 .font__poppins--primary {
-  @include font__poppins($font-weight: 600);
+  @include font__poppins;
   font-size: clamp(1.5rem, 3vw, 2.8rem);
 }
 
-.font__poppins-secondary {
+.font__poppins--secondary {
   @include font__poppins;
   font-size: clamp(1rem, 3vw, 2rem);
 }
 
-.font__poppins-tertiary {
-  @include font__poppins;
+.font__poppins--tertiary {
+  @include font__poppins(400);
   font-size: clamp(0.8rem, 3vw, 1.2rem)
 }
 
@@ -24,4 +24,8 @@
   font-weight: 400;
   font-size: 0.8rem;
   color: var(--color-white-1);
+}
+
+.font__green {
+  color: var(--color-green-1);
 }

@@ -38,7 +38,7 @@
     border-radius: 4px;
   }
   
-  @media (min-width: 645px) {
+  @media (min-width: 650px) {
     &::before {
       opacity: 0;
     }
@@ -55,6 +55,8 @@
 
   position: relative;
   padding: 0 1rem;
+
+  cursor: pointer;
 
   @extend %button__green;
 }
