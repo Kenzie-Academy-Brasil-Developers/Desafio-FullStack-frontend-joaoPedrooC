@@ -1,0 +1,10 @@
+.register__form {
+  display: flex;
+  flex-direction: column;
+  
+  gap: 1rem;
+
+  & > .button__register {
+    height: 40px;
+  }
+}
