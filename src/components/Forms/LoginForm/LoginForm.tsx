@@ -3,7 +3,7 @@ import { Input } from "../../Input/Input"
 import styles from './style.module.scss';
 import { IUserLoginInterface, IUserLoginResponse } from "../../../interfaces/user";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { createUserSchema } from "./createUserSchema";
+import { createUserSchema } from "./userLoginSchema";
 import Swal from "sweetalert2";
 import { api } from "../../../services/api";
 import { useNavigate } from "react-router-dom";

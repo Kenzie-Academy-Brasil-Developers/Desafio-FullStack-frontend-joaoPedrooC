@@ -15,3 +15,10 @@ export interface IUserLoginResponse {
   user: IUser
   token: string
 }
+
+export interface IUserCreate {
+  name: string
+  email: string
+  password: string
+  number: string
+}
