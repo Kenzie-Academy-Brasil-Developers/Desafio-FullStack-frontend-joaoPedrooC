@@ -29,3 +29,9 @@
 .font__green {
   color: var(--color-green-1);
 }
+
+.error__message {
+  font-family: 'Poppins';
+  color: var(--color-red-1);
+  font-size: 0.9rem;
+}
