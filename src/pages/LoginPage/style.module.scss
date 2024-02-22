@@ -21,23 +21,6 @@
   }
 }
 
-.login__form {
-  display: flex;
-  flex-direction: column;
-  
-  gap: 1rem;
-  
-  & > div {
-    display: flex;
-    flex-direction: column;
-    gap: 1.3rem;
-    
-    & > .button__submit {
-      height: 40px;
-    }
-  }
-}
-
 @media (min-width: 650px) {
   .login__container {
     flex-direction: row;
