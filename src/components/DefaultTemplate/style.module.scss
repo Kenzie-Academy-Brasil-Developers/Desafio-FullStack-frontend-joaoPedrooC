@@ -1,0 +1,22 @@
+.div__template {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 800px) {
+    flex-direction: row-reverse;
+
+    & > main {
+      width: 100%;
+    }
+  }
+}
+
+.template__container {
+  position: relative;
+
+  height: calc(100vh - 60px);
+
+  @media (min-width: 800px) {
+    height: 100vh
+  }
+}

@@ -1,0 +1,48 @@
+.dashboard__section {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2rem;
+
+  padding: 1rem 0;
+
+  & > h1 {
+    text-align: center;
+  }
+
+  @media (min-width: 800px) {
+    justify-content: center;
+    height: 100%;
+  }
+}
+
+.dashboard__list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2rem;
+  
+  & > li {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+
+    border: 1px solid var(--color-white-1);
+    border-radius: 8px;
+  
+    padding: 1rem;
+
+    transition: box-shadow .5s;
+    cursor: context-menu;
+
+    &:hover {
+      box-shadow: 1px 1px 20px 2px var(--color-green-1);
+    }
+  }
+
+  @media (min-width: 800px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

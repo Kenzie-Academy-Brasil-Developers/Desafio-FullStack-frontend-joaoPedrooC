@@ -4,8 +4,7 @@
     width: calc(100% + 4px);
     height: calc(100% + 4px);
   
-    background: linear-gradient(20deg,
-    #2b8a3e, #37b24d, #2f9e44, #37b24d, #b2f2bb, transparent, transparent, transparent, transparent, transparent);
+    background: linear-gradient(20deg, var(--color-green-2), var(--color-green-1), var(--color-green-3), var(--color-green-4), var(--color-green-5), var(--transparent), var(--transparent), var(--transparent), var(--transparent), var(--transparent));
   
     position: absolute;
     top: -2px;
