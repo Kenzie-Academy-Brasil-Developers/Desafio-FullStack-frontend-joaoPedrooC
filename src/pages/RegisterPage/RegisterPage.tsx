@@ -1,8 +1,19 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { RegisterForm } from '../../components/Forms/RegisterForm/RegisterForm'
 import styles from './style.module.scss'
+import { useEffect } from 'react'
 
 export const RegisterPage = () => {
+  const userToken = localStorage.getItem('@contacts:token')
+  const userId = localStorage.getItem('@contacts:userId')
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if(userToken && userId) {
+      navigate('/dashboard')
+    }
+  }, [])
+
   return (
     <main>
       <div className={`container ${styles.register__container}`}>

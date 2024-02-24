@@ -17,6 +17,7 @@
   height: calc(100vh - 60px);
 
   @media (min-width: 800px) {
-    height: 100vh
+    height: 100vh;
+    position: inherit;
   }
 }

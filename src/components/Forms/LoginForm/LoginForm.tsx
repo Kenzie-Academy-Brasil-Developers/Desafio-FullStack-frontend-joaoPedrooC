@@ -26,6 +26,7 @@ export const LoginForm = () => {
       })
       
       localStorage.setItem('@contacts:token', data.token)
+      localStorage.setItem('@contacts:userId', data.userId)
       navigate('/dashboard')
     } catch (error) {
       console.log(error);

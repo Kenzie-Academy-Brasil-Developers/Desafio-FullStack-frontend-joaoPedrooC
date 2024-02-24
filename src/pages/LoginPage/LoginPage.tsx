@@ -1,8 +1,19 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { LoginForm } from "../../components/Forms/LoginForm/LoginForm";
 import styles from './style.module.scss';
+import { useEffect } from "react";
 
 export const LoginPage = () => {
+  const userToken = localStorage.getItem('@contacts:token')
+  const userId = localStorage.getItem('@contacts:userId')
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if(userToken && userId) {
+      navigate('/dashboard')
+    }
+  }, [])
+
   return (
     <main>
       <div className={`container ${styles.login__container}`}>
