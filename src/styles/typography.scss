@@ -35,3 +35,10 @@
   color: var(--color-red-1);
   font-size: 0.9rem;
 }
+
+.font__inter {
+  font-family: 'Inter';
+  font-size: clamp(1rem, 5vw, 1.2rem);
+
+  color: var(--color-white-1);
+}

@@ -1,0 +1,18 @@
+.contacts__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  overflow-y: auto;
+
+  padding: 1rem;
+  
+  height: calc(100% - 60px);
+
+  &::-webkit-scrollbar {
+    background-color: var(--color-green-1);
+    border-radius: 25px;
+    border: 5px solid var(--color-black-1);
+    width: 15px;
+  }
+}
