@@ -7,7 +7,8 @@ import { updateContactSchema } from "./updateContactFormSchema"
 
 import styles from './style.module.scss'
 import { useDispatch } from "react-redux"
-import { updateContactThunk } from "../../../store/modules/Contacts/thunk"
+import { updateContactThunk } from '../../../features/contacts/thunk'
+import { AppDispatch } from "../../../store"
 
 interface IUpdateContactFormProps {
   contact: IContact
@@ -24,7 +25,7 @@ export const UpdateContactForm = ({ contact, setIsOpen }: IUpdateContactFormProp
     }
   })
 
-  const dispatch: any = useDispatch()
+  const dispatch: AppDispatch = useDispatch()
 
   const submit = (formData: ICreateContact) => {
     dispatch(updateContactThunk(formData, contact.id))

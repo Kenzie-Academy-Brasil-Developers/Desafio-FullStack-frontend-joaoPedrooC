@@ -1,1 +1,0 @@
-export const GET_USER_INFO: string = 'GET_USER_INFO'

@@ -1,5 +1,4 @@
 import { IoIosContact } from "react-icons/io";
-import { FaWhatsapp } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io"
 
 import { IContact } from "../../../interfaces/contacts"

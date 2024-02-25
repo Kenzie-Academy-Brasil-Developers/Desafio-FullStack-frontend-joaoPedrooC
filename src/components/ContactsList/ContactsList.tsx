@@ -1,17 +1,17 @@
 import { useSelector } from "react-redux"
 import { ContactsCard } from "./ContactsCard/ContactsCard"
-import { IContact } from "../../interfaces/contacts"
 
 import styles from './style.module.scss'
+import { RootState } from "../../store"
 
 export const ContactsList = () => {
-  const userContacts: IContact[] = useSelector(store => store.contacts)
+  const userContacts = useSelector((store: RootState) => store.contacts)
 
   const contactsFirstLetter: string[] = []
 
   userContacts.forEach(contact => {
-    if(!contactsFirstLetter.includes(contact.name[0])) {
-      contactsFirstLetter.push(contact.name[0])
+    if(!contactsFirstLetter.includes(contact.name[0].toUpperCase())) {
+      contactsFirstLetter.push(contact.name[0].toUpperCase())
     }
   });
 
@@ -19,13 +19,13 @@ export const ContactsList = () => {
   
   return (
     <ul className={styles.contacts__list}>
-      { contactsFirstLetter.map(firstLetter => {
+      { contactsFirstLetter.map((firstLetter, index) => {
         const filteredContactsByFirstLetter = userContacts.filter(contact => contact.name[0].toLowerCase() === firstLetter.toLowerCase())
         return (
-          <>
-            <h1 className="font__poppins--primary">{firstLetter.toUpperCase()}</h1>
+          <div key={index}>
+            <h1 className="font__poppins--primary" key={index}>{firstLetter}</h1>
             {filteredContactsByFirstLetter.map(contact => <ContactsCard key={contact.id} contactInfo={contact} />)}
-          </>
+          </div>
         )
       }) }
     </ul>

@@ -1,11 +1,12 @@
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode, useState } from "react";
 import { Header } from "../Header/Header"
 import { MenuModal } from "../Modals/MenuModal/MenuModal";
 
 import styles from './style.module.scss'
 import { DefaultTemplateAside } from "../DefaultTemplateAside/DefaultTemplateAside";
 import { useDispatch } from "react-redux";
-import { getUserInfoThunk } from "../../store/modules/User/thunk";
+import { getUserInfoThunk } from "../../features/user/thunk";
+import { AppDispatch } from "../../store";
 
 interface IDefaultTemplateProps {
   children: ReactNode
@@ -13,7 +14,7 @@ interface IDefaultTemplateProps {
 
 export const DefaultTemplate = ({ children }: IDefaultTemplateProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const dispatch: any = useDispatch()
+  const dispatch: AppDispatch = useDispatch()
 
   const userToken = localStorage.getItem('@contacts:token')
   const userId = localStorage.getItem('@contacts:userId')
