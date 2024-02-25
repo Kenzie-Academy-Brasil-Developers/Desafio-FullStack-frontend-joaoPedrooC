@@ -25,3 +25,5 @@ export interface IUserCreate {
   password: string
   number: string
 }
+
+export type TUserUpdate = Partial<IUserCreate>

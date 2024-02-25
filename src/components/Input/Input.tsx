@@ -6,12 +6,13 @@ interface IInputProps {
   type: string
   placeholder: string
   errors?: FieldError
+  id?: string
 }
 
-export const Input = forwardRef(({ type, placeholder, errors, ...rest }: IInputProps, ref: ForwardedRef<HTMLInputElement>) => {
+export const Input = forwardRef(({ type, placeholder, errors, id, ...rest }: IInputProps, ref: ForwardedRef<HTMLInputElement>) => {
   return (
     <div className={styles.input__container}>
-      <input className={`${styles.input} font__inter--input`} type={type} placeholder={placeholder} {...rest} ref={ref} />
+      <input className={`${styles.input} font__inter--input`} type={type} id={id} placeholder={placeholder} {...rest} ref={ref} />
       { errors ? <span className="error__message">{errors.message}</span> : null }
     </div>
   )

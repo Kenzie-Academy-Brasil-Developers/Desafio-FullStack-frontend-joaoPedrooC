@@ -5,7 +5,8 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { createContactSchema } from "./createContactFormSchema"
 import { ICreateContact } from "../../../interfaces/contacts"
 import { useDispatch } from "react-redux"
-import { createContactThunk } from "../../../store/modules/Contacts/thunk"
+import { createContactThunk } from '../../../features/contacts/thunk'
+import { AppDispatch } from "../../../store"
 
 interface ICreateContactFormProps {
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
@@ -16,7 +17,7 @@ export const CreateContactForm = ({ setIsOpen }: ICreateContactFormProps) => {
     resolver: zodResolver(createContactSchema)
   })
 
-  const dispatch: any = useDispatch()
+  const dispatch: AppDispatch = useDispatch()
 
   const submit = (formData: ICreateContact) => {
     dispatch(createContactThunk(formData))

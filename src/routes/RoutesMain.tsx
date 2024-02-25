@@ -4,6 +4,7 @@ import { RegisterPage } from "../pages/RegisterPage/RegisterPage"
 import { ProtectedRoutes } from "./ProtectedRoutes/ProtectedRoutes"
 import { DashboardPage } from "../pages/DashboardPage/DashboardPage"
 import { ContactsPage } from "../pages/ContactsPage/ContactsPage"
+import { SettingsPage } from "../pages/SettingsPage/SettingsPage"
 
 export const RoutesMain = () => {
   return (
@@ -15,6 +16,9 @@ export const RoutesMain = () => {
       </Route>
       <Route path="/contacts" element={<ProtectedRoutes />} >
         <Route index element={<ContactsPage />} />
+      </Route>
+      <Route path="/settings" element={<ProtectedRoutes />} >
+        <Route index element={<SettingsPage />} />
       </Route>
     </Routes>
   )

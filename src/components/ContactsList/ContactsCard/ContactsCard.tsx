@@ -8,8 +8,9 @@ import { useState } from "react"
 import { UpdateContactModal } from "../../Modals/UpdateContactModal/UpdateContactModal"
 import Swal from "sweetalert2"
 import { useDispatch } from "react-redux"
-import { deleteContactThunk } from "../../../store/modules/Contacts/thunk"
+import { deleteContactThunk } from '../../../features/contacts/thunk'
 import { ViewContactModal } from "../../Modals/ViewContactModal/ViewContactModal"
+import { AppDispatch } from "../../../store"
 
 interface IContactsCardProps {
   contactInfo: IContact
@@ -21,7 +22,7 @@ export const ContactsCard = ({ contactInfo }: IContactsCardProps) => {
   const [editOpen, setEditOpen] = useState<boolean>(false)
   const [viewOpen, setviewOpen] = useState<boolean>(false)
 
-  const dispatch: any = useDispatch()
+  const dispatch: AppDispatch = useDispatch()
 
   const deleteContact = () => {
     Swal.fire({

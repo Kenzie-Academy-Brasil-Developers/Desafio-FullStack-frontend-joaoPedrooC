@@ -1,8 +1,8 @@
 import { Dispatch } from "redux";
-import { IContact, ICreateContact } from "../../../interfaces/contacts";
-import { api } from "../../../services/api";
-import { createContact, deleteContact, updateContact } from "./actions";
 import Swal from "sweetalert2";
+import { IContact, ICreateContact } from "../../interfaces/contacts";
+import { api } from "../../services/api";
+import { createContact, deleteContact, updateContact } from "./contacts-slice";
 
 export const createContactThunk = (contactInfo: ICreateContact) => async (dispatch: Dispatch) => {
   try {
@@ -20,6 +20,7 @@ export const createContactThunk = (contactInfo: ICreateContact) => async (dispat
       icon: 'success',
       customClass: 'toast__container'
     })
+    
     dispatch(createContact(data))
   } catch (error) {
     console.log(error);
@@ -79,7 +80,7 @@ export const deleteContactThunk = (deletingContact: IContact) => async (dispatch
       customClass: 'toast__container'
     })
 
-    dispatch(deleteContact(deletingContact))
+    dispatch(deleteContact(deletingContact.id))
   } catch (error) {
     console.log(error);
     
