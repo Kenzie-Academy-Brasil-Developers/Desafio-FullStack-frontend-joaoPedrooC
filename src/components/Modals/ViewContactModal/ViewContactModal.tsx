@@ -19,9 +19,6 @@ export const ViewContactModal = ({ contact, setIsOpen }: IViewContactModalProps)
         <IoMdClose onClick={() => setIsOpen(false)} className={styles.modal__close} />
         <IoIosContact className={styles.modal__profileIcon} />
         <h3 className="font__poppins--secondary">{contact.name}</h3>
-        <a href={`https://wa.me/55${contact.number}/?text=Olá ${contact.name}, vamos conversar?`} target="_blank">
-          <FaWhatsapp />
-        </a>
         <div className={styles.modal__userInfo}>
           <ViewContactModalUserInfo contact={contact} />
         </div>
