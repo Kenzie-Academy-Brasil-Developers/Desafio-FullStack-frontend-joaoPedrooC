@@ -19,6 +19,8 @@
 .card__info {
   display: flex;
   gap: clamp(1rem, 5vw, 2rem);
+
+  word-break: break-all;
   
   & > .card__profile {
     min-width: 20px;

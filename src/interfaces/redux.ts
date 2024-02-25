@@ -8,5 +8,5 @@ export interface getUserInterface {
 
 export interface IContactTypes {
   type: string
-  contacts: Array<IContact> | IContact
+  contacts: IContact
 }

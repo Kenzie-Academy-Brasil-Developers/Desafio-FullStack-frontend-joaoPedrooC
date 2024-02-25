@@ -20,7 +20,7 @@ export const CreateContactForm = ({ setIsOpen }: ICreateContactFormProps) => {
 
   const submit = (formData: ICreateContact) => {
     dispatch(createContactThunk(formData))
-    setIsOpen(false);
+    setIsOpen(false)
   }
   
   return (
