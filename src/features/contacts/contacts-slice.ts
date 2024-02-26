@@ -7,7 +7,7 @@ export const contactsSlice = createSlice({
   name: 'contacts',
   initialState,
   reducers: {
-    getUserContacts: (state, { payload }: PayloadAction<IContact[]>) => {
+    getUserContacts: (_, { payload }: PayloadAction<IContact[]>) => {
       return payload
     },
     createContact: (state, { payload }: PayloadAction<IContact>) => {
