@@ -1,0 +1,26 @@
+:root {
+  --color-black-1: #111111;
+  --color-black-2: #212529;
+
+  --color-white-1: #dee2e6;
+  --color-white-2: #f1f3f2;
+
+  --color-green-1: #37b24d;
+  --color-green-2: #2b8a3e;
+  --color-green-3: #2f9e44;
+  --color-green-4: #37b24d;
+  --color-green-5: #b2f2bb;
+
+  --color-red-1: #c92a2a;
+  --color-red-2: #e03131;
+  --color-red-3: #f03e3e;
+  --color-red-4: #fa5252;
+  --color-red-5: #ff6b6b;
+  --color-red-6: #ff6b6b;
+
+  --transparent: transparent;
+}
+
+body {
+  background-color: var(--color-black-1);
+}

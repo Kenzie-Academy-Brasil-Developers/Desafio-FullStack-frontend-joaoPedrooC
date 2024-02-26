@@ -1,0 +1,18 @@
+.register__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+}
+
+.form__container {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  max-width: 350px;
+  
+  gap: 1rem;
+}

@@ -1,0 +1,17 @@
+.create__container {
+  height: 60px;
+  padding: 1rem;
+}
+
+.button__create {
+  display: flex;
+  align-items: center;
+
+  gap: 1rem;
+
+  padding: 0.2rem 1rem;
+  cursor: pointer;
+
+  border: 2px solid var(--color-white-1);
+  border-radius: 4px;
+}

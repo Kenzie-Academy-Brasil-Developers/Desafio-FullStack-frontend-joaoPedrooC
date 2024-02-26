@@ -1,0 +1,38 @@
+.menu__modal {
+  display: flex;
+
+  position: absolute;
+  top: 0;
+  left: clamp(0rem, 0.5vw, 1rem);
+
+  background-color: var(--color-black-2);
+  
+  height: 600px;
+  max-height: 100%;
+
+  width: 400px;
+  max-width: 99%;
+
+  padding: 1rem;
+  border-radius: 4px;
+
+  color: var(--color-white-1);
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 100%;
+  }
+
+  & svg {
+    height: clamp(20px, 5vw, 25px);
+    width: clamp(20px, 5vw, 25px);
+    color: var(--color-green-2);
+  }
+
+  @media (min-width: 800px) {
+    display: none;
+  }
+}

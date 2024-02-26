@@ -1,0 +1,15 @@
+.view__contactsContainer {
+  display: flex;
+  align-items: center;
+
+  gap: 0.8rem;
+
+  word-break: break-all;
+
+  & > svg {
+    color: var(--color-white-1);
+    
+    min-width: 20px;
+    min-height: 20px;
+  }
+}
